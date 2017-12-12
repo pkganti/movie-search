@@ -1,0 +1,22 @@
+
+body {
+  margin: 0;
+  font-family: 'Roboto';
+  background: #eaeaea;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/*=================BANNER ======================*/
+
+.banner .cover_img {
+  background: url('../images/cover.jpg');
+  height: 1200px;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
