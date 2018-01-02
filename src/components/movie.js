@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Header from './header'
 
 const REQ_MOVIE_DETAIL = `http://www.omdbapi.com/?i=`
+const REQ_MOVIE_POSTER = `http://img.omdbapi.com/?i=`
 const API_KEY = 'fc4557f7'
 
 class Movie extends Component {
@@ -25,21 +26,22 @@ class Movie extends Component {
       })
     })
   }
-
   render(){
+    const style = {
+      background: `url(${REQ_MOVIE_POSTER}${this.props.match.params.movieid}&apikey=${API_KEY}) no-repeat`
+    }
     return(
       <div>
         <Header/>
-        <div className="movie_bio">
-            <div className="avatar">
-                <span style={{background:`url('${this.state.movie.Poster}') no-repeat`}}></span>
+        <div className="movie_bio_main">
+            <div className="movie_bio_item">
+                <span style={style}></span>
             </div>
-            <div className="bio">
+            <div className="movie_bio_title">
                 <h3>{this.state.movie.Title}</h3>
-                <div className="bio_text">
+                <div className="movie_bio_plot">
                     {this.state.movie.Plot}
                 </div>
-
             </div>
         </div>
       </div>
@@ -48,4 +50,3 @@ class Movie extends Component {
 }
 
 export default Movie
-

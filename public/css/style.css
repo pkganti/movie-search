@@ -81,32 +81,30 @@ header {
   font-size: 33px;
   border-bottom: 1px solid #2196f3;
   color: #949494;
-
-
-/*=====================MOVIE BIO ====================*/
-
-.movie_bio {
-  box-sizing: border-box;
-  padding: 10px 30px;
-
 }
 
-.movie_bio .avatar span {
+/*=====================MOVIE ITEM ====================*/
+
+.movie_bio_main {
+  padding: 10px 30px;
+}
+
+.movie_bio_main .movie_bio_item span{
   width: 130px;
-  height: 130px;
+  height: 200px;
   display: block;
   margin: 0 auto;
   background-size: cover !important;
 }
 
-.movie_bio h3 {
+.movie_bio_title h3 {
   font-weight: 100;
   text-align: center;
   font-size: 30px;
   margin: 10px 0;
 }
 
-.movie_bio .bio_text {
+.movie_bio_plot {
   font-weight: 100;
   font-size: 14px;
 }
